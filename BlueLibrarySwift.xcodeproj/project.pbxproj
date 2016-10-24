@@ -14,6 +14,8 @@
 		101DD6D51A052EDE00161F0D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101DD6D31A052EDE00161F0D /* LaunchScreen.xib */; };
 		101DD6E11A052EDE00161F0D /* BlueLibrarySwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101DD6E01A052EDE00161F0D /* BlueLibrarySwiftTests.swift */; };
 		101DD6EC1A052F0E00161F0D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101DD6EB1A052F0E00161F0D /* HTTPClient.swift */; };
+		4923CDF11DBE63A400335145 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4923CDF01DBE63A400335145 /* LibraryAPI.swift */; };
+		4923CDF31DBE693200335145 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4923CDF21DBE693200335145 /* PersistencyManager.swift */; };
 		49CB87DF1DBE4A34008008E3 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CB87DD1DBE4A34008008E3 /* AlbumView.swift */; };
 		49CB87E01DBE4A34008008E3 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CB87DE1DBE4A34008008E3 /* Album.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		101DD6DF1A052EDE00161F0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		101DD6E01A052EDE00161F0D /* BlueLibrarySwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueLibrarySwiftTests.swift; sourceTree = "<group>"; };
 		101DD6EB1A052F0E00161F0D /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		4923CDF01DBE63A400335145 /* LibraryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
+		4923CDF21DBE693200335145 /* PersistencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		49CB87DD1DBE4A34008008E3 /* AlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		49CB87DE1DBE4A34008008E3 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,11 +87,11 @@
 		101DD6C71A052EDE00161F0D /* BlueLibrarySwift */ = {
 			isa = PBXGroup;
 			children = (
+				4923CDEF1DBE626900335145 /* Controller */,
+				4923CDEE1DBE626300335145 /* View */,
+				4923CDED1DBE625A00335145 /* Model */,
 				101DD6EA1A052EE400161F0D /* API */,
-				49CB87DD1DBE4A34008008E3 /* AlbumView.swift */,
-				49CB87DE1DBE4A34008008E3 /* Album.swift */,
 				101DD6CA1A052EDE00161F0D /* AppDelegate.swift */,
-				101DD6CC1A052EDE00161F0D /* ViewController.swift */,
 				101DD6CE1A052EDE00161F0D /* Main.storyboard */,
 				101DD6D11A052EDE00161F0D /* Images.xcassets */,
 				101DD6D31A052EDE00161F0D /* LaunchScreen.xib */,
@@ -125,8 +129,34 @@
 			isa = PBXGroup;
 			children = (
 				101DD6EB1A052F0E00161F0D /* HTTPClient.swift */,
+				4923CDF01DBE63A400335145 /* LibraryAPI.swift */,
+				4923CDF21DBE693200335145 /* PersistencyManager.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		4923CDED1DBE625A00335145 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49CB87DE1DBE4A34008008E3 /* Album.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4923CDEE1DBE626300335145 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				49CB87DD1DBE4A34008008E3 /* AlbumView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4923CDEF1DBE626900335145 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				101DD6CC1A052EDE00161F0D /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,9 +263,11 @@
 			files = (
 				101DD6CD1A052EDE00161F0D /* ViewController.swift in Sources */,
 				101DD6CB1A052EDE00161F0D /* AppDelegate.swift in Sources */,
+				4923CDF11DBE63A400335145 /* LibraryAPI.swift in Sources */,
 				49CB87DF1DBE4A34008008E3 /* AlbumView.swift in Sources */,
 				101DD6EC1A052F0E00161F0D /* HTTPClient.swift in Sources */,
 				49CB87E01DBE4A34008008E3 /* Album.swift in Sources */,
+				4923CDF31DBE693200335145 /* PersistencyManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
