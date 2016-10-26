@@ -14,6 +14,7 @@
 		101DD6D51A052EDE00161F0D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101DD6D31A052EDE00161F0D /* LaunchScreen.xib */; };
 		101DD6E11A052EDE00161F0D /* BlueLibrarySwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101DD6E01A052EDE00161F0D /* BlueLibrarySwiftTests.swift */; };
 		101DD6EC1A052F0E00161F0D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101DD6EB1A052F0E00161F0D /* HTTPClient.swift */; };
+		490A8B3A1DBF95440018D7E2 /* AlbumExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A8B391DBF95440018D7E2 /* AlbumExtensions.swift */; };
 		4923CDF11DBE63A400335145 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4923CDF01DBE63A400335145 /* LibraryAPI.swift */; };
 		4923CDF31DBE693200335145 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4923CDF21DBE693200335145 /* PersistencyManager.swift */; };
 		49CB87DF1DBE4A34008008E3 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CB87DD1DBE4A34008008E3 /* AlbumView.swift */; };
@@ -42,6 +43,7 @@
 		101DD6DF1A052EDE00161F0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		101DD6E01A052EDE00161F0D /* BlueLibrarySwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueLibrarySwiftTests.swift; sourceTree = "<group>"; };
 		101DD6EB1A052F0E00161F0D /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		490A8B391DBF95440018D7E2 /* AlbumExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumExtensions.swift; sourceTree = "<group>"; };
 		4923CDF01DBE63A400335145 /* LibraryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
 		4923CDF21DBE693200335145 /* PersistencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		49CB87DD1DBE4A34008008E3 /* AlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
@@ -128,9 +130,9 @@
 		101DD6EA1A052EE400161F0D /* API */ = {
 			isa = PBXGroup;
 			children = (
-				101DD6EB1A052F0E00161F0D /* HTTPClient.swift */,
 				4923CDF01DBE63A400335145 /* LibraryAPI.swift */,
 				4923CDF21DBE693200335145 /* PersistencyManager.swift */,
+				101DD6EB1A052F0E00161F0D /* HTTPClient.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				49CB87DE1DBE4A34008008E3 /* Album.swift */,
+				490A8B391DBF95440018D7E2 /* AlbumExtensions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				101DD6CD1A052EDE00161F0D /* ViewController.swift in Sources */,
+				490A8B3A1DBF95440018D7E2 /* AlbumExtensions.swift in Sources */,
 				101DD6CB1A052EDE00161F0D /* AppDelegate.swift in Sources */,
 				4923CDF11DBE63A400335145 /* LibraryAPI.swift in Sources */,
 				49CB87DF1DBE4A34008008E3 /* AlbumView.swift in Sources */,

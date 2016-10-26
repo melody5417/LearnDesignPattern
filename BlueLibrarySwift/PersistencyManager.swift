@@ -9,12 +9,12 @@
 import UIKit
 
 /**
- * @param 处理专辑数据持久化的类
+ * @param 处理专辑数据持久化的类 管理专辑数据
  */
 class PersistencyManager: NSObject {
     
     // 存储专辑数组
-    private var albums = [Album]()
+    fileprivate var albums = [Album]()
     
     override init() {
         let album1 = Album(title: "Best of Bowie",
@@ -54,15 +54,15 @@ class PersistencyManager: NSObject {
         return albums
     }
     
-    func addAlbum(album: Album, index: Int) {
+    func addAlbum(_ album: Album, index: Int) {
         if (albums.count >= index) {
-            albums.insert(album, atIndex: index)
+            albums.insert(album, at: index)
         } else {
             albums.append(album)
         }
     }
     
-    func deleteAlbumAtIndex(index: Int) {
-        albums.removeAtIndex(index)
+    func deleteAlbumAtIndex(_ index: Int) {
+        albums.remove(at: index)
     }
 }
