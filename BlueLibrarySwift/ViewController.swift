@@ -30,11 +30,13 @@ class ViewController: UIViewController {
 
 	@IBOutlet var dataTable: UITableView!
 	@IBOutlet var toolbar: UIToolbar!
-	
+    @IBOutlet weak var scroller: HorizontalScroller!
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
         
+        // 关闭导航栏的透明效果
         self.navigationController?.navigationBar.isTranslucent = false
         currentAlbumIndex = 0
         
@@ -46,6 +48,9 @@ class ViewController: UIViewController {
         view.addSubview(dataTable!)
         
         showDataForAlbum(currentAlbumIndex)
+        
+        scroller.delegate = self
+        reloadScroller()
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -93,5 +98,47 @@ extension ViewController: UITableViewDataSource {
         }
         return cell
     }
+}
+
+extension ViewController: HorizontalScrollerDelegate {
+    func horizontalScrollerClickedViewAtIndex(_ scroller: HorizontalScroller, index: Int) {
+        //1
+        let previousAlbumView = scroller.viewAtIndex(currentAlbumIndex) as! AlbumView
+        previousAlbumView.highlightAlbum(false)
+        //2
+        currentAlbumIndex = index
+        //3
+        let albumView = scroller.viewAtIndex(index) as! AlbumView
+        albumView.highlightAlbum(true)
+        //4
+        showDataForAlbum(index)
+    }
+    
+    func numberOfViewsForHorizontalScroller(_ scroller: HorizontalScroller) -> (Int) {
+        return allAlbums.count
+    }
+    
+    func horizontalScrollerViewAtIndex(_ scroller: HorizontalScroller, index: Int) -> (UIView) {
+        let album = allAlbums[index]
+        let albumView = AlbumView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), albumCover: album.coverUrl)
+        if currentAlbumIndex == index {
+            albumView.highlightAlbum(true)
+        } else {
+            albumView.highlightAlbum(false)
+        }
+        return albumView
+    }
+    
+    func reloadScroller() {
+        allAlbums = LibraryAPI.sharedInstance.getAlums()
+        if currentAlbumIndex < 0 {
+            currentAlbumIndex = 0
+        } else if currentAlbumIndex >= allAlbums.count {
+            currentAlbumIndex = allAlbums.count - 1
+        }
+        scroller.reload()
+        showDataForAlbum(currentAlbumIndex)
+    }
+
 }
 
